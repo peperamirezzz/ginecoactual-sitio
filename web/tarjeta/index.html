@@ -1,0 +1,307 @@
+<title>Tarjeta Lara Barragán</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap">
+<style>
+/* Tarjeta digital en una columna de móvil: foto a sangre arriba que se funde en azul marino; rosa para la Dra. Diana, azul para el Dr. Ignacio. */
+:root{
+  color-scheme:dark;
+  --bg:#0C1017; --bg-deep:#05070A; --ink:#F2F6FC; --muted:#A9B8CE; --soft:#7E8CA3;
+  --line:rgba(236,243,252,.14); --glass:rgba(255,255,255,.06); --glass-hi:rgba(255,255,255,.11);
+  --sky:#8FB3FF; --blue:#0B5FFF; --rose:#9CC8FF; --blush:#BFD6FF;
+  --acc:#8FB3FF; --acc-glow:rgba(11,95,255,.42); --btn:#0B5FFF; --btn-hi:#2E78FF;
+  --font:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+}
+html[data-doc="diana"]{--acc:#BFD6FF; --acc-glow:rgba(109,160,255,.48); --btn:#0B5FFF; --btn-hi:#2E78FF}
+html[data-doc="ignacio"]{--acc:#8FB3FF; --acc-glow:rgba(11,95,255,.48); --btn:#0A47D4; --btn-hi:#1B5CF0}
+
+*{box-sizing:border-box}
+html{background:var(--bg-deep)}
+body{margin:0;background:var(--bg-deep);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance}
+a{color:inherit;text-decoration:none}
+img{display:block}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:12px}
+button{font:inherit;color:inherit}
+
+.app{position:relative;max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);overflow:hidden;
+  padding-bottom:max(36px,env(safe-area-inset-bottom,0px))}
+@media (min-width:520px){.app{margin-block:24px;min-height:calc(100vh - 48px);border-radius:32px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px var(--line)}}
+.pad{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* animación de entrada: corta y con posición final visible */
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.view:not([hidden]) .rise{animation:rise .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*70ms)}
+@media (prefers-reduced-motion:reduce){.view:not([hidden]) .rise{animation:none}}
+
+/* portada */
+.hero{position:relative;aspect-ratio:5/6;overflow:hidden;background:var(--bg)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(5,8,13,.78) 0%,rgba(5,8,13,0) 26%),
+  linear-gradient(0deg,var(--bg) 2%,rgba(5,8,13,.92) 30%,rgba(5,8,13,0) 66%)}
+.hero .glow{position:absolute;inset:auto -20% -30% -20%;height:70%;background:radial-gradient(60% 60% at 50% 100%,var(--acc-glow),transparent 70%);pointer-events:none}
+.brand{position:absolute;top:max(18px,env(safe-area-inset-top,0px));left:max(20px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:12px;z-index:2}
+.brand svg{width:40px;height:40px;flex:none}
+.brand b{display:block;font-family:var(--serif);font-weight:500;font-size:18px;line-height:1.1;letter-spacing:-.01em}
+.brand small{display:block;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--sky);margin-top:2px}
+.hero-copy{position:absolute;left:0;right:0;bottom:0;padding-bottom:6px;z-index:2}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--acc)}
+.hero h1{font-family:var(--serif);font-weight:480;font-size:clamp(30px,8.6vw,38px);line-height:1.1;letter-spacing:0;margin-top:10px}
+.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--acc);letter-spacing:0;padding:0 .08em}
+.hero .sub{color:var(--muted);font-weight:300;font-size:15px;margin-top:10px}
+
+.back{position:absolute;top:max(18px,env(safe-area-inset-top,0px));left:max(16px,env(safe-area-inset-left,0px));z-index:3;display:inline-flex;align-items:center;gap:8px;
+  min-height:44px;padding:0 16px 0 12px;border-radius:999px;background:rgba(5,8,13,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);font-size:13px;font-weight:500}
+.dhero{aspect-ratio:4/5}
+.dhero .shade{background:linear-gradient(180deg,rgba(5,8,13,.55) 0%,rgba(5,8,13,0) 22%),linear-gradient(0deg,var(--bg) 6%,rgba(5,8,13,.94) 34%,rgba(5,8,13,0) 70%)}
+.dhero>img{object-position:50% 18%}
+.dhero .name{font-family:var(--serif);font-weight:480;font-size:clamp(31px,9vw,40px);line-height:1.08;letter-spacing:0;margin-top:0}
+.dhero .name em{font-style:normal;font-weight:300;display:block;font-size:.62em;letter-spacing:-.01em;color:var(--muted);margin-bottom:2px}
+.dhero .role{font-family:var(--serif);font-style:italic;font-weight:500;font-size:20px;color:var(--acc);margin-top:10px}
+.dhero .line{color:var(--muted);font-weight:300;font-size:14px;margin-top:2px}
+
+/* contenido */
+.lead{color:var(--muted);font-weight:300;font-size:16px;line-height:1.65;padding-top:18px}
+.label{font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--soft);margin:30px 0 12px}
+.stack{display:grid;gap:12px}
+
+.pick{display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:22px;background:var(--glass);border:1px solid var(--line);transition:transform .2s,background .2s,border-color .2s}
+.pick:hover{transform:translateY(-2px);background:var(--glass-hi)}
+.pick img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 14%;flex:none;border:2px solid var(--c)}
+.pick .t{flex:1;min-width:0}
+.pick b{display:block;font-weight:600;font-size:16px;line-height:1.25}
+.pick small{display:block;font-size:13px;color:var(--c);font-weight:500;margin-top:2px;word-break:break-word}
+.pick svg{width:20px;height:20px;flex:none;color:var(--muted)}
+.pick-d{--c:#BFD6FF}
+.pick-i{--c:#8FB3FF}
+
+.panel{border-radius:22px;background:var(--glass);border:1px solid var(--line);padding:18px}
+.place{display:flex;gap:14px;align-items:flex-start}
+.place .ic{width:44px;height:44px;border-radius:14px;background:rgba(143,179,255,.15);display:grid;place-items:center;flex:none;color:var(--sky)}
+.place b{display:block;font-weight:600;font-size:16px;line-height:1.3}
+.place p{color:var(--muted);font-weight:300;font-size:14px;line-height:1.5;margin-top:3px}
+
+.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 24px;border-radius:999px;border:0;background:var(--btn);color:#fff;
+  font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s;width:100%}
+.btn:hover{background:var(--btn-hi);transform:translateY(-2px)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:16px;border-radius:20px;background:var(--glass);border:1px solid var(--line);cursor:pointer;text-align:left;min-width:0;transition:transform .2s,background .2s}
+.tile:hover{transform:translateY(-2px);background:var(--glass-hi)}
+.tile .ico{color:var(--acc)}
+.tile b{display:block;font-weight:600;font-size:14px;line-height:1.25}
+.tile small{display:block;font-weight:300;font-size:12.5px;color:var(--muted);line-height:1.35;word-break:break-word}
+.tile.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px}
+.tile.wide .t{flex:1;min-width:0}
+.tile .cp{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--acc);flex:none}
+
+.about p{color:var(--ink);font-weight:300;font-size:15.5px;line-height:1.65}
+.cred{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;line-height:1.7;font-weight:400}
+.cred b{color:var(--ink);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:13px;font-weight:400}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--acc);flex:none}
+
+.share{display:flex;gap:16px;align-items:center}
+.qr{width:132px;height:132px;flex:none;border-radius:16px;background:#fff;padding:8px;display:block}
+.qr svg{width:100%;height:100%;display:block}
+.share .t{flex:1;min-width:0}
+.share b{display:block;font-weight:600;font-size:15px;line-height:1.3}
+.share p{color:var(--muted);font-weight:300;font-size:13px;line-height:1.5;margin-top:3px}
+.mini{display:inline-flex;align-items:center;gap:8px;margin-top:12px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--glass-hi);font-size:12.5px;font-weight:500;cursor:pointer}
+.mini .ico{width:16px;height:16px;color:var(--acc)}
+.other{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px;padding:14px 4px 0;color:var(--muted);font-size:14px;font-weight:400}
+.other b{color:var(--ink);font-weight:600}
+.other svg{width:20px;height:20px;color:var(--acc)}
+.foot{margin-top:26px;text-align:center;color:var(--soft);font-size:11.5px;line-height:1.6;font-weight:300}
+.toast{position:fixed;left:50%;bottom:max(24px,env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff;color:#0B1322;font-weight:600;font-size:13px;padding:12px 20px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:opacity .25s,transform .25s;z-index:50}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:360px){.grid2{grid-template-columns:1fr}.share{flex-direction:column;align-items:flex-start}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 56 56">
+    <rect x="6" y="5" width="16" height="46" rx="8" fill="#FFFFFF"/>
+    <rect x="6" y="35" width="44" height="16" rx="8" fill="#5E93FF"/>
+    <circle cx="38" cy="17" r="8.5" fill="#5E93FF"/>
+    <circle cx="38" cy="17" r="3.2" fill="#0C1017"/>
+  </symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="app">
+
+  <!-- EQUIPO -->
+  <main class="view" id="v-equipo">
+    <header class="hero">
+      <img src="media/duo.jpg" alt="La Dra. Diana y el Dr. Ignacio Lara Barragán de brazos cruzados en el pasillo del consultorio" style="object-position:63% 28%">
+      <div class="shade"></div><div class="glow"></div>
+      <div class="brand"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Clínica de la Mujer</b><small>Lara Barragán</small></span></div>
+      <div class="hero-copy pad">
+        <p class="eyebrow">Ginecología y Obstetricia</p>
+        <h1>Dra. Diana <em>y</em> Dr. Ignacio Lara Barragán</h1>
+        <p class="sub">Hospital Ángeles del Pedregal · CDMX</p>
+      </div>
+    </header>
+    <section class="pad">
+      <p class="lead rise" style="--i:1">Un equipo que atiende en conjunto todas las áreas de la ginecología y la obstetricia, con trato cercano y sin juicios.</p>
+      <h2 class="label rise" style="--i:2">Elige tu tarjeta</h2>
+      <div class="stack">
+        <a class="pick pick-d rise" style="--i:3" href="#diana"><img src="media/diana.jpg" alt="La Dra. Diana Lara Barragán"><span class="t"><b>Dra. Diana Lara Barragán</b><small>@dradianitagine</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+        <a class="pick pick-i rise" style="--i:4" href="#ignacio"><img src="media/ignacio.jpg" alt="El Dr. Ignacio Lara Barragán"><span class="t"><b>Dr. Ignacio Lara Barragán</b><small>@drlarabarragan</small></span><svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+      </div>
+      <h2 class="label rise" style="--i:5">Consultorio</h2>
+      <div class="panel place rise" style="--i:6">
+        <span class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div><b>Hospital Ángeles del Pedregal · Consultorio 502</b><p>Camino a Santa Teresa 1055, Héroes de Padierna, Ciudad de México<br>Lun–Vie 9:00–19:00 · Sáb 9:00–14:00</p></div>
+      </div>
+      <div class="grid2 rise" style="--i:7;margin-top:12px">
+        <a class="tile" href="https://www.google.com/maps/search/?api=1&query=Hospital%20%C3%81ngeles%20Pedregal%2C%20Camino%20a%20Santa%20Teresa%201055%2C%20H%C3%A9roes%20de%20Padierna%2C%20Ciudad%20de%20M%C3%A9xico" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Cómo llegar</b><small>Abrir en Google Maps</small></span></a>
+        <button class="tile" type="button" data-copy-url><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span><b>Copiar enlace</b><small>Compartir esta tarjeta</small></span></button>
+      </div>
+      <div class="panel share rise" style="--i:8;margin-top:12px" id="qr-equipo" hidden>
+        <span class="qr" id="qr-equipo-img" role="img" aria-label="Código QR de la tarjeta del equipo"></span>
+        <div class="t"><b>Escanea y guarda la tarjeta</b><p>Apunta la cámara del teléfono al código para abrir la tarjeta del equipo.</p></div>
+      </div>
+      <p class="foot rise" style="--i:9">Clínica de la Mujer Lara Barragán<br>Información de contacto y presentación. No sustituye una valoración médica.</p>
+    </section>
+  </main>
+
+  <!-- TARJETA INDIVIDUAL -->
+  <main class="view" id="v-doc" hidden>
+    <header class="hero dhero">
+      <img id="d-img" src="media/diana.jpg" alt="">
+      <div class="shade"></div><div class="glow"></div>
+      <a class="back" href="#"><svg class="ico" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M19 12H5m6-6-6 6 6 6"/></svg>Equipo</a>
+      <div class="hero-copy pad">
+        <h1 class="name" id="d-name"></h1>
+        <p class="role" id="d-role"></p>
+        <p class="line" id="d-line"></p>
+      </div>
+    </header>
+    <section class="pad">
+      <div class="stack rise" style="--i:1;margin-top:20px" id="d-actions"></div>
+      <h2 class="label rise" style="--i:2">Sobre</h2>
+      <div class="panel about rise" style="--i:3"><p id="d-about"></p><div class="cred" id="d-cred" hidden></div></div>
+      <h2 class="label rise" style="--i:4">Atención</h2>
+      <div class="chips rise" style="--i:5" id="d-areas"></div>
+      <h2 class="label rise" style="--i:6">Comparte</h2>
+      <div class="panel share rise" style="--i:7" id="d-share">
+        <span class="qr" id="d-qr" role="img" hidden></span>
+        <div class="t"><b id="d-share-t">Comparte esta tarjeta</b><p id="d-share-p">Envía el enlace por WhatsApp o muéstrala en pantalla.</p>
+          <button class="mini" type="button" data-copy-url><svg class="ico" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>Copiar enlace</button></div>
+      </div>
+      <a class="other rise" style="--i:8" id="d-other" href="#"><span id="d-other-t"></span><svg class="ico" viewBox="0 0 24 24"><use href="#i-chev"/></svg></a>
+      <p class="foot rise" style="--i:9">Clínica de la Mujer Lara Barragán · Hospital Ángeles del Pedregal<br>Información de contacto. No sustituye una valoración médica.</p>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  // ---- Datos de contacto. Los campos vacíos se ocultan solos; al llenarlos aparecen los botones. ----
+  var CARD_URL = 'https://clinicadelamujerlarabarragan.com/tarjeta/';
+  var MAPS = 'https://www.google.com/maps/search/?api=1&query=Hospital%20%C3%81ngeles%20Pedregal%2C%20Camino%20a%20Santa%20Teresa%201055%2C%20H%C3%A9roes%20de%20Padierna%2C%20Ciudad%20de%20M%C3%A9xico';
+  var QR = {"equipo": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 33 33\" class=\"segno\"><path class=\"qrline\" stroke=\"#0a1322\" d=\"M0 0.5h7m2 0h2m2 0h1m2 0h5m2 0h1m2 0h7m-33 1h1m5 0h1m2 0h1m1 0h1m1 0h3m1 0h1m2 0h1m5 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h4m3 0h2m1 0h2m2 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h3m3 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m5 0h1m1 0h2m2 0h1m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h4m3 0h4m1 0h1m3 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h1m1 0h2m2 0h2m2 0h1m2 0h4m-25 1h1m1 0h5m4 0h5m1 0h1m2 0h1m1 0h1m1 0h1m1 0h5m-30 1h3m4 0h5m1 0h1m1 0h1m1 0h4m1 0h1m2 0h2m1 0h2m1 0h1m-31 1h3m1 0h1m1 0h1m6 0h2m1 0h1m1 0h3m1 0h3m1 0h1m1 0h2m-28 1h2m1 0h2m1 0h1m3 0h2m4 0h4m1 0h2m1 0h4m-32 1h3m1 0h5m6 0h1m2 0h2m2 0h2m1 0h1m1 0h3m-30 1h1m7 0h2m1 0h1m2 0h3m3 0h4m2 0h1m2 0h4m-31 1h2m1 0h3m1 0h2m1 0h1m6 0h1m1 0h1m3 0h2m1 0h2m1 0h1m-32 1h2m1 0h2m4 0h2m3 0h1m1 0h1m2 0h4m1 0h4m1 0h2m-31 1h2m1 0h1m2 0h1m6 0h1m3 0h1m1 0h1m2 0h1m1 0h2m1 0h2m3 0h1m-32 1h1m1 0h2m2 0h1m1 0h4m3 0h2m1 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-32 1h3m1 0h8m1 0h2m1 0h1m2 0h3m2 0h4m1 0h2m-30 1h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m2 0h2m2 0h1m2 0h2m1 0h4m1 0h1m-33 1h2m3 0h4m1 0h1m2 0h4m5 0h3m2 0h3m-30 1h1m2 0h1m1 0h1m6 0h1m1 0h2m2 0h1m2 0h1m1 0h1m2 0h1m3 0h1m1 0h1m-33 1h1m5 0h4m1 0h2m1 0h5m2 0h2m1 0h1m2 0h5m-32 1h1m3 0h1m3 0h1m1 0h1m4 0h1m2 0h1m2 0h1m3 0h2m1 0h4m-32 1h1m2 0h5m1 0h2m2 0h5m4 0h1m1 0h5m-21 1h2m1 0h1m1 0h1m2 0h1m1 0h4m2 0h1m3 0h1m1 0h3m-33 1h7m4 0h2m2 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h4m2 0h2m4 0h5m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h1m3 0h1m2 0h2m4 0h6m-30 1h1m1 0h3m1 0h1m1 0h2m4 0h4m3 0h1m2 0h2m2 0h2m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m5 0h4m2 0h2m-28 1h1m5 0h1m2 0h3m2 0h1m1 0h1m1 0h6m1 0h2m1 0h1m1 0h1m-31 1h7m1 0h2m1 0h1m2 0h1m2 0h1m1 0h1m2 0h6m3 0h1\"/></svg>", "diana": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 33 33\" class=\"segno\"><path class=\"qrline\" stroke=\"#0a1322\" d=\"M0 0.5h7m3 0h2m1 0h1m2 0h1m1 0h3m2 0h1m2 0h7m-33 1h1m5 0h1m6 0h3m2 0h1m1 0h1m5 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h4m6 0h2m2 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h4m4 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m1 0h5m1 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m2 0h2m2 0h4m1 0h1m3 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h3m3 0h2m2 0h1m2 0h4m-25 1h1m1 0h5m2 0h3m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h5m-31 1h1m1 0h3m5 0h3m1 0h1m1 0h6m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h4m2 0h1m2 0h1m5 0h3m2 0h3m1 0h3m1 0h1m1 0h2m-31 1h2m2 0h1m3 0h3m2 0h2m2 0h1m1 0h4m1 0h2m1 0h4m-31 1h1m1 0h1m1 0h2m1 0h1m2 0h2m2 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h3m-29 1h1m2 0h2m4 0h1m1 0h1m1 0h3m1 0h6m2 0h1m2 0h4m-29 1h5m1 0h1m2 0h2m6 0h1m3 0h2m1 0h2m1 0h1m-32 1h3m1 0h1m2 0h3m2 0h1m1 0h1m1 0h1m3 0h3m1 0h4m1 0h2m-31 1h1m1 0h2m1 0h6m2 0h2m2 0h1m4 0h1m1 0h2m1 0h2m3 0h1m-33 1h2m3 0h1m1 0h1m2 0h2m1 0h1m2 0h1m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h3m2 0h6m2 0h3m2 0h1m1 0h3m2 0h4m1 0h2m-32 1h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m7 0h1m2 0h2m1 0h4m1 0h1m-32 1h1m1 0h2m1 0h3m1 0h4m1 0h2m1 0h1m3 0h3m2 0h3m-30 1h3m1 0h1m2 0h4m4 0h1m2 0h4m1 0h1m2 0h1m3 0h1m1 0h1m-33 1h1m1 0h1m3 0h1m2 0h1m1 0h8m1 0h3m1 0h1m2 0h5m-32 1h1m1 0h3m7 0h1m1 0h2m2 0h2m1 0h1m3 0h2m1 0h5m-33 1h1m1 0h5m4 0h2m2 0h3m4 0h1m1 0h5m2 0h1m-24 1h4m4 0h1m1 0h4m2 0h1m3 0h1m1 0h3m-33 1h7m2 0h1m2 0h1m2 0h2m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h5m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h5m1 0h2m2 0h2m4 0h6m-30 1h1m1 0h3m1 0h1m1 0h2m3 0h1m1 0h5m1 0h1m2 0h2m2 0h2m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h3m7 0h4m2 0h2m-28 1h1m5 0h1m3 0h2m1 0h2m1 0h1m1 0h6m1 0h2m1 0h1m1 0h1m-31 1h7m1 0h3m2 0h1m3 0h1m1 0h1m2 0h6m3 0h1\"/></svg>", "ignacio": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 33 33\" class=\"segno\"><path class=\"qrline\" stroke=\"#0a1322\" d=\"M0 0.5h7m1 0h2m1 0h1m2 0h1m3 0h1m3 0h1m3 0h7m-33 1h1m5 0h1m1 0h3m1 0h1m4 0h1m1 0h1m1 0h1m4 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h2m3 0h1m1 0h5m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h3m5 0h1m2 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h2m2 0h2m1 0h1m4 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m2 0h2m1 0h1m5 0h1m1 0h5m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h3m1 0h1m4 0h1m3 0h3m-25 1h1m2 0h10m1 0h4m1 0h2m3 0h2m2 0h1m1 0h3m-33 1h3m4 0h4m1 0h1m2 0h1m2 0h2m2 0h2m4 0h3m-29 1h5m2 0h2m3 0h5m2 0h5m2 0h5m-32 1h2m2 0h1m2 0h1m3 0h1m1 0h1m1 0h2m2 0h1m4 0h3m2 0h2m-31 1h1m2 0h1m1 0h3m2 0h1m1 0h4m3 0h1m5 0h2m3 0h2m-29 1h2m1 0h2m1 0h2m1 0h1m2 0h1m1 0h1m3 0h2m1 0h1m1 0h1m1 0h2m-31 1h1m3 0h3m2 0h4m1 0h1m1 0h1m2 0h4m3 0h1m2 0h1m-29 1h1m3 0h1m1 0h9m4 0h1m3 0h2m2 0h3m1 0h1m-33 1h1m4 0h2m2 0h4m1 0h1m4 0h2m1 0h8m-28 1h1m5 0h2m3 0h3m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-32 1h2m1 0h3m1 0h1m2 0h3m1 0h2m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1m-31 1h3m2 0h1m2 0h4m1 0h1m3 0h2m3 0h1m1 0h1m1 0h4m-32 1h4m2 0h2m3 0h3m1 0h3m1 0h1m3 0h3m1 0h1m1 0h1m1 0h1m-32 1h2m2 0h2m2 0h3m3 0h1m1 0h1m1 0h2m2 0h2m3 0h2m1 0h1m-31 1h1m2 0h1m1 0h2m5 0h1m1 0h2m2 0h1m2 0h4m1 0h3m1 0h3m-33 1h1m7 0h2m3 0h1m2 0h4m2 0h2m1 0h3m2 0h2m-32 1h2m1 0h5m3 0h1m3 0h1m3 0h2m2 0h7m1 0h1m-24 1h2m1 0h8m5 0h1m3 0h1m1 0h1m-31 1h7m1 0h1m4 0h3m2 0h2m1 0h4m1 0h1m1 0h1m1 0h1m-31 1h1m5 0h1m1 0h1m1 0h2m1 0h1m2 0h1m6 0h2m3 0h3m-31 1h1m1 0h3m1 0h1m1 0h4m1 0h3m3 0h2m2 0h6m3 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h3m2 0h1m1 0h2m2 0h4m1 0h1m3 0h2m-33 1h1m1 0h3m1 0h1m2 0h1m4 0h2m1 0h1m1 0h1m1 0h1m3 0h1m1 0h3m1 0h2m-33 1h1m5 0h1m2 0h1m1 0h2m1 0h3m1 0h1m3 0h2m3 0h2m1 0h3m-33 1h7m1 0h1m1 0h2m4 0h2m5 0h2m1 0h3\"/></svg>"};
+  var DOCS = {
+    diana: {
+      key:'diana', tag:'Dra.', first:'Diana', name:'Dra. Diana Lara Barragán', ig:'dradianitagine',
+      wa:'5215543907469', tel:'+52 1 55 4390 7469', mail:'',
+      role:'Ginecología y Obstetricia', line:'Hospital Ángeles del Pedregal · Consultorio 502',
+      img:'media/diana.jpg', pos:'50% 16%',
+      about:'Ginecóloga y obstetra con alta especialidad en cirugía de mínima invasión. Acompaña el embarazo, la perimenopausia y la menopausia con medicina basada en evidencia y un trato cercano, sin juicios.',
+      creds:'<b>Médica cirujana</b> con mención honorífica, Universidad La Salle<br><b>Especialista</b> en Ginecología y Obstetricia, Hospital Ángeles del Pedregal<br><b>Alta especialidad</b> en cirugía de mínima invasión · Certificación en cirugía robótica<br>Cédula profesional 12375859 · Cédula de especialidad 15281523',
+      areas:['Perimenopausia y menopausia','Embarazo','Anticoncepción','Cirugía de mínima invasión','Cirugía robótica','Edad reproductiva'],
+      other:'ignacio', otherName:'Dr. Ignacio'
+    },
+    ignacio: {
+      key:'ignacio', tag:'Dr.', first:'Ignacio', name:'Dr. Ignacio Lara Barragán', ig:'drlarabarragan',
+      wa:'5215511252595', tel:'+52 1 55 1125 2595', mail:'',
+      role:'Ginecología y Obstetricia', line:'Hospital Ángeles del Pedregal · Consultorio 502',
+      img:'media/ignacio.jpg', pos:'50% 12%',
+      about:'Más de 25 años de experiencia clínica y quirúrgica. Experto en cirugía laparoscópica, histeroscopia y láser ginecológico, con atención integral de la menopausia y la osteoporosis.',
+      creds:'<b>Médico cirujano</b> UNAM · <b>Especialista</b> Universidad La Salle<br><b>Coordinador</b> del Servicio de Ginecología y Obstetricia<br>Cédula profesional 2054790 · Cédula de especialidad 3177443',
+      areas:['Menopausia y osteoporosis','Sangrado anormal','Miomas y quistes','Cirugía laparoscópica','Histeroscopia','Láser ginecológico'],
+      other:'diana', otherName:'Dra. Diana'
+    }
+  };
+
+  var ICON = {
+    wa:'<svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>',
+    ig:'<svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+    dm:'<svg class="ico" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>',
+    pin:'<svg class="ico" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+    tel:'<svg class="ico" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+    mail:'<svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+    cp:'<svg class="ico" viewBox="0 0 24 24" style="width:15px;height:15px"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>'
+  };
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function $(id){return document.getElementById(id)}
+  var toastT;
+  function toast(msg){var t=$('toast');t.textContent=msg;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},1800)}
+  function copy(text,ok){
+    function fallback(){
+      var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;left:-9999px;top:0';
+      document.body.appendChild(ta);ta.select();var done=false;try{done=document.execCommand('copy')}catch(e){}
+      document.body.removeChild(ta);toast(done?ok:'Mantén presionado el texto para copiarlo')
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){toast(ok)},fallback)}else{fallback()}
+  }
+  function shareUrl(){var h=location.hash;return (CARD_URL||location.href.split('#')[0])+(h&&h!=='#'?h:'')}
+
+  function actions(d){
+    var out=[];
+    var msg=encodeURIComponent('Hola '+d.tag+' '+d.first+', quisiera agendar una consulta.');
+    if(d.wa){
+      out.push('<a class="btn" href="https://wa.me/'+d.wa+'?text='+msg+'" target="_blank" rel="noopener">'+ICON.wa+'Agendar por WhatsApp</a>');
+    }else{
+      out.push('<a class="btn" href="https://ig.me/m/'+d.ig+'" target="_blank" rel="noopener">'+ICON.dm+'Escribir por Instagram</a>');
+    }
+    var tiles=[];
+    if(d.wa){tiles.push('<a class="tile" href="https://ig.me/m/'+d.ig+'" target="_blank" rel="noopener">'+ICON.dm+'<span><b>Mensaje directo</b><small>Instagram</small></span></a>')}
+    tiles.push('<a class="tile" href="https://www.instagram.com/'+d.ig+'/" target="_blank" rel="noopener">'+ICON.ig+'<span><b>Instagram</b><small>@'+esc(d.ig)+'</small></span></a>');
+    tiles.push('<a class="tile" href="'+MAPS+'" target="_blank" rel="noopener">'+ICON.pin+'<span><b>Cómo llegar</b><small>Hospital Ángeles del Pedregal</small></span></a>');
+    if(d.tel){tiles.push('<button class="tile wide" type="button" data-copy="'+esc(d.tel)+'" data-ok="Teléfono copiado">'+ICON.tel+'<span class="t"><b>'+esc(d.tel)+'</b><small>WhatsApp directo</small></span><span class="cp">'+ICON.cp+'Copiar</span></button>')}
+    if(d.mail){tiles.push('<button class="tile wide" type="button" data-copy="'+esc(d.mail)+'" data-ok="Correo copiado">'+ICON.mail+'<span class="t"><b>'+esc(d.mail)+'</b><small>Correo electrónico</small></span><span class="cp">'+ICON.cp+'Copiar</span></button>')}
+    out.push('<div class="grid2">'+tiles.join('')+'</div>');
+    return out.join('');
+  }
+
+  function render(){
+    var h=(location.hash||'').replace('#','').toLowerCase();
+    var d=DOCS[h];
+    var eq=$('v-equipo'),dv=$('v-doc');
+    if(!d){
+      document.documentElement.removeAttribute('data-doc');
+      eq.hidden=false;dv.hidden=true;
+      document.title='Tarjeta Lara Barragán';
+    }else{
+      document.documentElement.setAttribute('data-doc',d.key);
+      eq.hidden=true;dv.hidden=false;
+      var img=$('d-img');img.src=d.img;img.alt='Retrato de '+d.name;img.style.objectPosition=d.pos;
+      $('d-name').innerHTML='<em>'+esc(d.tag)+'</em>'+esc(d.name.replace(d.tag+' ',''));
+      $('d-role').textContent=d.role;$('d-line').textContent=d.line;
+      $('d-actions').innerHTML=actions(d);
+      $('d-about').textContent=d.about;
+      var c=$('d-cred');if(d.creds){c.innerHTML=d.creds;c.hidden=false}else{c.hidden=true}
+      $('d-areas').innerHTML=d.areas.map(function(a){return '<span class="chip"><i></i>'+esc(a)+'</span>'}).join('');
+      var q=QR[d.key],qe=$('d-qr');
+      if(q){qe.innerHTML=q;qe.setAttribute('aria-label','Código QR de la tarjeta de '+d.name);qe.hidden=false}else{qe.hidden=true}
+      var o=DOCS[d.other];$('d-other').href='#'+o.key;$('d-other-t').innerHTML='Ver la tarjeta de <b>'+esc(o.otherName)+'</b>';
+      document.title=d.name;
+    }
+    window.scrollTo(0,0);
+  }
+  var qe=QR.equipo;if(qe){$('qr-equipo-img').innerHTML=qe;$('qr-equipo').hidden=false}
+
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-copy]');if(b){copy(b.getAttribute('data-copy'),b.getAttribute('data-ok')||'Copiado');return}
+    var u=e.target.closest('[data-copy-url]');if(u){copy(shareUrl(),'Enlace copiado')}
+  });
+  window.addEventListener('hashchange',render);
+  render();
+})();
+</script>
