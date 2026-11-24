@@ -3,34 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dr. Ignacio A. Lara Barragán · Tarjeta digital</title>
-<meta name="description" content="Tarjeta digital interactiva del Dr. Ignacio A. Lara Barragán — Ginecología, Obstetricia, Cirugía laparoscópica e Infertilidad. Hospital Ángeles del Pedregal, Consultorio 502.">
+<title>Dr. Ignacio Lara Barragán · Tarjeta digital</title>
+<meta name="description" content="Tarjeta digital del Dr. Ignacio Lara Barragán — Ginecología y Obstetricia, Cirugía laparoscópica e Infertilidad. Hospital Ángeles del Pedregal, Consultorio 502, CDMX.">
 <link rel="canonical" href="https://clinicadelamujerlarabarragan.com/tarjeta/ignacio.html">
-<meta property="og:title" content="Dr. Ignacio A. Lara Barragán · Tarjeta digital">
-<meta property="og:description" content="Ginecología · Obstetricia · Cirugía laparoscópica · Infertilidad. Toca los íconos para interactuar.">
-<meta name="robots" content="noindex">
+<meta property="og:title" content="Dr. Ignacio Lara Barragán · Tarjeta digital">
+<meta property="og:description" content="Ginecología · Obstetricia · Cirugía laparoscópica · Infertilidad. Agenda por WhatsApp.">
+<meta property="og:image" content="https://clinicadelamujerlarabarragan.com/tarjeta/media/ignacio.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 <style>
+:root{--bg:#F8F0EB;--card:#fff;--head:#3A1F47;--ink:#4A3550;--muted:#8A7083;--rose:#E29AA5;--rose-d:#BC6378;--rose-l:#F4C2CC;--soft:#FAE9EF;--line:#F0CFD9;--deep:#241028;--plum:#3A1F47;--plum2:#54306B;--serif:'Fraunces',Georgia,serif}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{min-height:100%}
-body{background:#0c2334;display:flex;justify-content:center;font-family:system-ui,sans-serif}
-.card{position:relative;width:min(100vw,560px)}
-.card img.bg{width:100%;display:block}
-a.hot{position:absolute;border-radius:50%;-webkit-tap-highlight-color:transparent}
-a.hot:active{background:rgba(255,255,255,.22)}
-a.qr{border-radius:12px}
+body{font-family:Poppins,system-ui,sans-serif;background:#171019;display:flex;justify-content:center;min-height:100vh}
+.page{width:min(100vw,560px);background:var(--bg);min-height:100vh;box-shadow:0 0 80px rgba(0,0,0,.5);overflow:hidden}
+
+.hero{position:relative;background:radial-gradient(130% 90% at 15% 0%,var(--plum2) 0%,var(--plum) 55%,var(--deep) 100%);color:#fff;padding:26px 26px 0}
+.hero::before{content:"";position:absolute;width:300px;height:300px;right:-90px;top:-60px;border-radius:52% 48% 55% 45%/60% 55% 45% 40%;background:radial-gradient(circle at 40% 35%,rgba(226,154,165,.45),transparent 70%);filter:blur(30px)}
+.brand{position:relative;display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.02em}
+.brand svg{width:30px;height:30px}
+.brand b{display:block;font-size:14.5px}
+.brand small{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--rose-l)}
+.photo{position:relative;margin:22px auto 0;width:200px;height:200px;border-radius:50%;overflow:hidden;border:4px solid rgba(244,194,204,.5);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.idw{position:relative;text-align:center;padding:20px 0 28px}
+.idw .tag{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
+h1{font-size:31px;font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:6px 0 4px}
+.esp{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--rose-l)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:14px}
+.chip{font-size:11.5px;font-weight:600;letter-spacing:.04em;padding:6px 13px;border:1px solid rgba(244,194,204,.4);border-radius:999px;color:var(--rose-l)}
+.wa{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;margin:4px 0 -27px;background:#fff;color:var(--head);text-decoration:none;font-weight:600;font-size:16px;padding:17px 20px;border-radius:999px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.wa svg{width:21px;height:21px}
+
+.acts{padding:48px 22px 6px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.act{display:flex;flex-direction:column;align-items:center;gap:9px;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 8px 13px;transition:transform .15s}
+.act:active{transform:scale(.96)}
+.act .ic{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--soft),var(--rose-l));}
+.act .ic svg{width:23px;height:23px;stroke:var(--rose-d);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.act b{font-size:12.5px;font-weight:600;color:var(--head)}
+.act small{font-size:10px;color:var(--muted);text-align:center;line-height:1.3;margin-top:-4px}
+
+.info{margin:20px 22px 0;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 24px;display:flex;gap:18px;align-items:center}
+.info .tx{flex:1;min-width:0}
+.info .k{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-d);margin-bottom:6px}
+.info p{font-size:13.5px;line-height:1.6;color:var(--ink)}
+.info p b{color:var(--head)}
+.qr{flex:none;width:92px;height:92px;padding:7px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.qr svg{width:100%;height:100%}
+
+.cred{margin:14px 22px 0;background:linear-gradient(135deg,var(--soft),#fff);border:1px solid var(--line);border-radius:22px;padding:18px 24px}
+.cred .k{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-d);margin-bottom:6px}
+.cred p{font-size:12.5px;line-height:1.65;color:var(--ink)}
+
+.foot{margin-top:24px;background:var(--deep);color:#C9B3CE;text-align:center;padding:18px 20px 22px;font-size:11.5px}
+.foot b{display:block;color:var(--rose-l);font-size:12.5px;margin-bottom:3px}
+.foot a{color:var(--rose-l);text-decoration:none}
 </style>
 </head>
 <body>
-<div class="card">
-  <img class="bg" src="media/ignacio_tarjeta.jpg" alt="Tarjeta del Dr. Ignacio A. Lara Barragán — Ginecología, Obstetricia, Cirugía laparoscópica e Infertilidad. Hospital Ángeles del Pedregal, Torre de consultorios, Consultorio 502, Camino a Sta. Teresa 1055, Héroes de Padierna, 10700 CDMX. Presione los íconos para interactuar.">
-  <!-- hotspots (coordenadas en % del lienzo original) -->
-  <a class="hot" style="left:5.4%;top:74.8%;width:12.5%;aspect-ratio:1" href="https://wa.me/525511252595?text=Hola%20Dr.%20Ignacio%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp"></a>
-  <a class="hot" style="left:83.6%;top:74.3%;width:12.5%;aspect-ratio:1" href="https://www.google.com/maps/search/?api=1&query=Hospital%20%C3%81ngeles%20Pedregal%2C%20Camino%20a%20Santa%20Teresa%201055%2C%20H%C3%A9roes%20de%20Padierna%2C%20Ciudad%20de%20M%C3%A9xico" target="_blank" rel="noopener" aria-label="Ubicación"></a>
-  <a class="hot" style="left:15.2%;top:83.0%;width:11.5%;aspect-ratio:1" href="tel:+525511252595" aria-label="Móvil"></a>
-  <a class="hot" style="left:72.6%;top:82.3%;width:12.5%;aspect-ratio:1" href="https://clinicadelamujerlarabarragan.com" target="_blank" rel="noopener" aria-label="Sitio web"></a>
-  <a class="hot" style="left:35.3%;top:86.2%;width:11%;aspect-ratio:1" href="tel:+525555680303" aria-label="Teléfono de consultorio"></a>
-  <a class="hot" style="left:55.1%;top:86.4%;width:10.5%;aspect-ratio:1" href="mailto:drignaciolarabarragan@yahoo.com.mx" aria-label="Correo electrónico"></a>
-  <a class="hot qr" style="left:55.5%;top:24.9%;width:14.5%;aspect-ratio:1" href="https://wa.me/525511252595?text=Hola%20Dr.%20Ignacio%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="QR WhatsApp"></a>
+<div class="page">
+  <div class="hero">
+    <div class="brand"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="6" width="14" height="30" rx="7" fill="#E29AA5"/><circle cx="33" cy="13" r="6" fill="#F4C2CC"/><rect x="8" y="30" width="26" height="10" rx="5" fill="#FAE9EF"/></svg><span><b>Clínica de la Mujer</b><small>LARA BARRAGÁN</small></span></div>
+    <div class="photo"><img src="media/ignacio.jpg" alt="Dr. Ignacio Lara Barragán"></div>
+    <div class="idw">
+      <div class="tag">Dr.</div>
+      <h1>Ignacio Lara Barragán</h1>
+      <div class="esp">Ginecología y Obstetricia</div>
+      <div class="chips"><span class="chip">Cirugía laparoscópica</span><span class="chip">Infertilidad</span><span class="chip">Láser ginecológico</span></div>
+    </div>
+    <a class="wa" href="https://wa.me/525511252595?text=Hola%20Dr.%20Ignacio%2C%20quiero%20agendar%20una%20cita"><svg viewBox="0 0 24 24" fill="none" stroke="#1FAF5F" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Agendar por WhatsApp</a>
+  </div>
+
+  <div class="acts">
+    <a class="act" href="tel:+525511252595"><span class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><b>Móvil</b><small>55 1125 2595</small></a>
+    <a class="act" href="tel:+525555680303"><span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><b>Consultorio</b><small>55 5568 0303</small></a>
+    <a class="act" href="mailto:drignaciolarabarragan@yahoo.com.mx"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><b>Correo</b><small>Escribir email</small></a>
+    <a class="act" href="https://clinicadelamujerlarabarragan.com" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg></span><b>Sitio web</b><small>clinicadelamujer…</small></a>
+    <a class="act" href="https://www.google.com/maps/search/?api=1&query=Hospital%20%C3%81ngeles%20Pedregal%2C%20Camino%20a%20Santa%20Teresa%201055%2C%20H%C3%A9roes%20de%20Padierna%2C%20Ciudad%20de%20M%C3%A9xico" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><b>Ubicación</b><small>Cómo llegar</small></a>
+    <a class="act" href="ignacio.vcf" download="Dr-Ignacio-Lara-Barragan.vcf"><span class="ic"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M19 8v6M22 11h-6" stroke-width="1.6"/></svg></span><b>Guardar</b><small>Contacto</small></a>
+  </div>
+
+  <div class="info">
+    <div class="tx">
+      <div class="k">Consultorio</div>
+      <p><b>Hospital Ángeles del Pedregal</b><br>Torre de consultorios · Consultorio 502<br>Camino a Sta. Teresa 1055<br>Héroes de Padierna · 10700, CDMX</p>
+    </div>
+    <div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="segno"><path class="qrline" stroke="#3a1f47" d="M0 0.5h7m1 0h2m1 0h2m1 0h1m2 0h2m3 0h1m3 0h7m-33 1h1m5 0h1m1 0h2m1 0h3m4 0h2m1 0h1m4 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h4m2 0h1m2 0h4m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h2m2 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m1 0h2m1 0h1m4 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m3 0h1m7 0h1m2 0h4m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-22 1h1m1 0h1m2 0h1m1 0h1m3 0h3m-25 1h1m2 0h6m2 0h1m2 0h1m1 0h2m2 0h1m3 0h2m2 0h1m1 0h3m-31 1h4m2 0h1m6 0h1m2 0h2m2 0h2m4 0h3m-29 1h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h3m1 0h1m2 0h5m2 0h5m-32 1h1m2 0h2m5 0h2m3 0h2m2 0h1m4 0h3m2 0h2m-31 1h1m2 0h1m1 0h3m1 0h2m1 0h4m3 0h1m5 0h2m3 0h2m-33 1h1m4 0h1m2 0h1m1 0h2m2 0h3m1 0h1m3 0h2m1 0h1m1 0h1m1 0h2m-30 1h2m1 0h1m1 0h2m2 0h1m1 0h5m2 0h4m3 0h1m2 0h1m-30 1h1m1 0h1m2 0h1m1 0h2m1 0h2m1 0h1m5 0h1m4 0h2m2 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h5m4 0h1m1 0h8m-26 1h1m5 0h1m2 0h1m1 0h1m3 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m-33 1h5m1 0h1m2 0h2m1 0h1m1 0h6m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1m-33 1h1m1 0h1m1 0h2m2 0h2m3 0h3m3 0h2m3 0h1m1 0h1m1 0h4m-32 1h1m2 0h2m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m1 0h1m3 0h3m1 0h1m1 0h1m1 0h1m-32 1h3m1 0h1m2 0h3m2 0h1m2 0h1m2 0h2m2 0h2m3 0h2m1 0h1m-31 1h1m1 0h2m1 0h4m3 0h4m2 0h1m2 0h4m1 0h3m1 0h3m-33 1h1m2 0h2m4 0h3m1 0h1m2 0h3m3 0h2m1 0h3m2 0h2m-32 1h2m3 0h4m5 0h1m5 0h1m2 0h7m-22 1h3m2 0h6m5 0h1m3 0h1m1 0h1m-31 1h7m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h4m1 0h1m1 0h1m1 0h1m-31 1h1m5 0h1m1 0h1m1 0h5m1 0h1m6 0h2m3 0h3m-31 1h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h3m2 0h3m2 0h6m3 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h3m1 0h4m1 0h1m3 0h2m-33 1h1m1 0h3m1 0h1m2 0h2m1 0h2m1 0h3m1 0h1m1 0h1m3 0h1m1 0h3m1 0h2m-33 1h1m5 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h2m3 0h2m1 0h3m-33 1h7m1 0h3m1 0h3m1 0h2m5 0h2m1 0h3"/></svg></div>
+  </div>
+
+  <div class="cred">
+    <div class="k">Trayectoria</div>
+    <p>Más de 25 años de experiencia clínica y quirúrgica. Médico cirujano (UNAM) · Especialista (Universidad La Salle) · Coordinador del Servicio de Ginecología y Obstetricia. Cédula profesional 2054790 · Cédula de especialidad 3177443.</p>
+  </div>
+
+  <div class="foot"><b>Toca los botones para interactuar</b>Tarjeta digital · <a href="https://clinicadelamujerlarabarragan.com">clinicadelamujerlarabarragan.com</a></div>
 </div>
 </body>
 </html>
