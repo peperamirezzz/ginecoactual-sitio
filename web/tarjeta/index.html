@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tarjeta Lara Barragán</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap">
@@ -219,12 +223,12 @@ button{font:inherit;color:inherit}
     },
     ignacio: {
       key:'ignacio', tag:'Dr.', first:'Ignacio', name:'Dr. Ignacio Lara Barragán', ig:'drlarabarragan',
-      wa:'5215511252595', tel:'+52 1 55 1125 2595', mail:'',
-      role:'Ginecología y Obstetricia', line:'Hospital Ángeles del Pedregal · Consultorio 502',
+      wa:'5215511252595', tel:'+52 1 55 1125 2595', tel2:'55 5568 0303', mail:'drignaciolarabarragan@yahoo.com.mx',
+      role:'Ginecología y Obstetricia · Cirugía laparoscópica · Infertilidad', line:'Hospital Ángeles del Pedregal · Torre de consultorios · Consultorio 502',
       img:'media/ignacio.jpg', pos:'50% 12%',
       about:'Más de 25 años de experiencia clínica y quirúrgica. Experto en cirugía laparoscópica, histeroscopia y láser ginecológico, con atención integral de la menopausia y la osteoporosis.',
       creds:'<b>Médico cirujano</b> UNAM · <b>Especialista</b> Universidad La Salle<br><b>Coordinador</b> del Servicio de Ginecología y Obstetricia<br>Cédula profesional 2054790 · Cédula de especialidad 3177443',
-      areas:['Menopausia y osteoporosis','Sangrado anormal','Miomas y quistes','Cirugía laparoscópica','Histeroscopia','Láser ginecológico'],
+      areas:['Cirugía laparoscópica','Infertilidad','Menopausia y osteoporosis','Sangrado anormal','Miomas y quistes','Histeroscopia','Láser ginecológico','Uroginecología'],
       other:'diana', otherName:'Dra. Diana'
     }
   };
@@ -263,9 +267,10 @@ button{font:inherit;color:inherit}
     var tiles=[];
     if(d.wa){tiles.push('<a class="tile" href="https://ig.me/m/'+d.ig+'" target="_blank" rel="noopener">'+ICON.dm+'<span><b>Mensaje directo</b><small>Instagram</small></span></a>')}
     tiles.push('<a class="tile" href="https://www.instagram.com/'+d.ig+'/" target="_blank" rel="noopener">'+ICON.ig+'<span><b>Instagram</b><small>@'+esc(d.ig)+'</small></span></a>');
-    tiles.push('<a class="tile" href="'+MAPS+'" target="_blank" rel="noopener">'+ICON.pin+'<span><b>Cómo llegar</b><small>Hospital Ángeles del Pedregal</small></span></a>');
+    tiles.push('<a class="tile" href="'+MAPS+'" target="_blank" rel="noopener">'+ICON.pin+'<span><b>Cómo llegar</b><small>Camino a Sta. Teresa 1055, CDMX</small></span></a>');
     if(d.tel){tiles.push('<button class="tile wide" type="button" data-copy="'+esc(d.tel)+'" data-ok="Teléfono copiado">'+ICON.tel+'<span class="t"><b>'+esc(d.tel)+'</b><small>WhatsApp directo</small></span><span class="cp">'+ICON.cp+'Copiar</span></button>')}
     if(d.mail){tiles.push('<button class="tile wide" type="button" data-copy="'+esc(d.mail)+'" data-ok="Correo copiado">'+ICON.mail+'<span class="t"><b>'+esc(d.mail)+'</b><small>Correo electrónico</small></span><span class="cp">'+ICON.cp+'Copiar</span></button>')}
+    if(d.tel2){tiles.push('<button class="tile wide" type="button" data-copy="'+esc(d.tel2)+'" data-ok="Teléfono copiado">'+ICON.tel+'<span class="t"><b>'+esc(d.tel2)+'</b><small>Teléfono de consultorio</small></span><span class="cp">'+ICON.cp+'Copiar</span></button>')}
     out.push('<div class="grid2">'+tiles.join('')+'</div>');
     return out.join('');
   }
